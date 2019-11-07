@@ -1,0 +1,24 @@
+{
+  "name": "latihan-express",
+  "version": "1.0.0",
+  "description": "Code from Udemy course https://www.udemy.com/course/nodejs-the-complete-guide",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhsatrio/latihan-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhsatrio/latihan-express/issues"
+  },
+  "homepage": "https://github.com/muhsatrio/latihan-express#readme"
+}
