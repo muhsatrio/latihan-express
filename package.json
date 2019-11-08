@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Code from Udemy course https://www.udemy.com/course/nodejs-the-complete-guide",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "nodemon": "^1.19.4"
   },
