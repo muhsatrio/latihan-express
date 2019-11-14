@@ -12,7 +12,8 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getProducts =  (req, res, next) => {
-    const products = Product.fetchAll();
+    Product.fetchAll((products) => {
+        res.render('shop', {products: products, pageTitle: 'My Shop', path: '/'});
+    });
     // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-    res.render('shop', {products: products, pageTitle: 'My Shop', path: '/'});
 };
