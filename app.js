@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 // const expressHbs = require('express-handlebars');
 
 const app = express();
-
+const db = require('./util/database');
 
 // app.engine('handlebars', expressHbs());
 // app.set('view engine', 'pug');
