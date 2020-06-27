@@ -1,13 +1,10 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-// const expressHbs = require('express-handlebars');
 
 const app = express();
-const db = require('./util/database');
+const sequelize = require('./util/database');
 
-// app.engine('handlebars', expressHbs());
-// app.set('view engine', 'pug');
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -22,6 +19,12 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use(controller404.get404);
+
+sequelize.sync().then(result => {
+    console.log('Database connected');
+}).catch(err => {
+    console.log(err);
+});
 
 app.listen(3000);
 
